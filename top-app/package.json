@@ -1,0 +1,16 @@
+{
+  "name": "top-app",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf dist && rollup -c rollup.config.js"
+  },
+  "devDependencies": {
+    "rollup": "^1.26.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  },
+  "dependencies": {
+    "systemjs": "^6.1.4"
+  }
+}

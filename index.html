@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script src="./top-app/node_modules/systemjs/dist/system.js"></script>
+    <script type="systemjs-importmap">
+      {
+        "imports": {
+          "app": "./top-app/dist/index.js",
+          "team-a": "./team-a/dist/bundle.js",
+          "team-b": "./team-b/dist/bundle.js",
+          "shared-lib1": "./shared-lib/dist/shared-lib1.js",
+          "shared-lib2": "./shared-lib/dist/shared-lib2.js",
+          "jquery": "./shared-lib/dist/jquery.js",
+          "lodash": "./shared-lib/dist/lodash.js"
+        }
+      }
+    </script>
+    <script>
+      System.import("app");
+    </script>
+  </body>
+</html>
