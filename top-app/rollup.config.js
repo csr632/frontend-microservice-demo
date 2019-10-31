@@ -6,6 +6,6 @@ export default {
     dir: "./dist",
     format: "system"
   },
-  plugins: [resolve(), commonjs()],
+  plugins: [resolve()],
   external: ["team-a", "team-b", "jquery", "lodash"]
 };
