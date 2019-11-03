@@ -1,14 +1,3 @@
-/**
- * This is the **only** place where:
- * 1. 'Micro-service name' are bound to their 'deployment location'
- * ('deployment location' is usually a CDN URL)
- * 2. Deployment locations appear. (In all other places, we refer to a micro-service by its 'name')
- *
- * When a micro-services update, it's 'deployment location' often update
- * (because CDN URLs often contain version number or content hash).
- * So this file will update very frequently.
- */
-
 const sharedLibAddr = "http://127.0.0.1:8001";
 const teamAAddr = "http://127.0.0.1:8002";
 const teamBAddr = "http://127.0.0.1:8003";

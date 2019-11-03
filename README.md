@@ -25,21 +25,47 @@ Microservice is all about loosely couple among teams:
 > 'Team' refers to a very abstract concept here. It doesn't need to be a real team with real people in it. It can be any project with its own release schedule.
 
 1. Microservices can be developed, published and deployed **independently**.
-2. One microservice (or the top app) can call other microservices, without installing and building them. The caller only need to know the "name" and "API" of the callee, and don't need to know it's deployment and implementation details.
+2. One microservice (or the top app) can call other microservices, without installing and building them. The caller only needs to know the "name" and "API" of the microservices, and doesn't need to know their deployment and implementation details.
 
 In this demo:
 
-- `/shared-lib` provide several shared libraries, each being a microservices. `/shared-lib` is used to extract common dependencies(usually npm packages) and share them. So other microservices can exclude them from thier bundle and avoid loading duplicate code.
+- `/shared-lib` provides several shared libraries, each being a microservice. `/shared-lib` is used to extract common dependencies(usually npm packages) and share them. So other microservices can exclude them from thier bundle and avoid loading duplicate code.
   > `/shared-lib` can be mantained inside `/top-app`, if you want.
 - `/team-a` and `/team-b` are two microservices mantained by different teams.
   - They are developed, published and deployed **independently**. (They have different release schedule and deployment address)
-  - `/team-a` call a helper from `/team-b`, without installing and building `/team-b` into its own bundle. `/team-a` don't even need to know where `/team-b` is deployed! `/team-a` refer to `/team-b` by its name, not by its "address". How "name" are resolved into "address" is determined by "import map", which is configure by `/top-app`
+  - `/team-a` calls a helper from `/team-b`, without installing and building `/team-b` into its own bundle. `/team-a` don't even need to know where `/team-b` is deployed! `/team-a` refer to `/team-b` by its name, not by its "address". How "name" are resolved into "address" is determined by the "import map", which is configured by `/top-app`
 - `/top-app` is the top-level application, with whole control to the HTML file and the import map.
   - Import map is the **only** place where:
-    - "Microservice name" are bound to their "deployment location"
+    - Microservice "name" are bound to their "deployment location"
       ("deployment location" is usually a CDN URL)
     - Deployment locations appear. (In all other places, we refer to a microservice by its "name")
 
-When a microservice release a new versoion, it is deploy in a new address(For example, `https://some-cdn.com/team-a/1.0.1/bundle.js`). And the import map should be updated to use the new release. So the import map will be updated very frequently. In practise, we usually build a system to generate import map automatically. (In general, this system monitor the latest **`^1.0.0`** version of `team-a`, and populate its deployment address into the import map of `/top-app`)
+## Suggestions
 
-Because import map will make its cache invalidate frequently, and also, it is "critical resource" to render the app, it is recommended to inline import map into the HTML file.
+### Deliver optimized packages
+
+All shared-libs and microservices should be optimized in production.
+"Optimize" means "rolling up" a big module dependency tree (with many modules in it, and **one** of them is the entry point) into one big module (which exports same APIs as the entry point).
+Optimizing packages give us these benefits:
+
+- Reduce module-loading requests significantly
+- Get granular caching per optimized package boundary, so that users only re-fetch the package that change
+
+We use rollup to optimize packages in this demo. The modules referenced by the import map are already optimized.
+
+### Generate import map automatically
+
+When a microservice release a new version, it is often deployed in a new address(For example, `https://some-cdn.com/team-a/1.0.1/bundle.js`). And the import map should be updated to use the new release. This means that the import map will be updated very frequently.
+In practise, we usually build a system to generate import map automatically. (In general, this system monitors the latest **`^1.0.0`** version of `team-a`, and populates the deployment address into the import map of `/top-app`)
+
+### Inline import map into HTML file
+
+It is recommended to inline import map into HTML file in practise, because:
+
+- Import map will make its cache invalidate frequently
+- Import map is "critical resource" to render the app
+
+## TODOs
+
+1. Develop a tool that generates import map from a "microservice declaration" (perhaps introducing a new field in package.json)
+2. Development workflow
