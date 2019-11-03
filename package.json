@@ -10,10 +10,15 @@
     "build:b": "npm run build --prefix team-b",
     "build:s": "npm run build --prefix shared-lib",
     "build:t": "npm run build --prefix top-app",
-    "build:all": "npm run build:a && npm run build:b && npm run build:s && npm run build:t",
-    "serve": "npm run build:all && serve"
+    "buildAll": "concurrently \"npm:build:*\"",
+    "serve:a": "npm run serve --prefix team-a",
+    "serve:b": "npm run serve --prefix team-b",
+    "serve:s": "npm run serve --prefix shared-lib",
+    "serve:t": "npm run serve --prefix top-app",
+    "serveAll": "concurrently -k \"npm:serve:*\""
   },
   "devDependencies": {
+    "concurrently": "^5.0.0",
     "serve": "^11.2.0"
   }
 }
