@@ -25,7 +25,7 @@ Microservice is all about loosely couple among teams:
 > 'Team' refers to a very abstract concept here. It doesn't need to be a real team with real people in it. It can be any project with its own release schedule.
 
 1. Microservices can be developed, published and deployed **independently**.
-2. One microservice (or the top app) can call other microservices, without installing and building them. The caller only needs to know the "name" and "API" of the microservices, and doesn't need to know their deployment and implementation details.
+2. One microservice (or the top app) can call other microservices, without installing and building them. The caller only needs to know the "name" and "interface" of the microservices, and doesn't need to know their deployment and implementation details.
 
 In this demo:
 
