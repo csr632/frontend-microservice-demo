@@ -69,3 +69,6 @@ It is recommended to inline import map into HTML file in practise, because:
 
 1. Develop a tool that generates import map from a "microservice declaration" (perhaps introducing a new field in package.json)
 2. Development workflow
+
+
+"package" 是独立开发、部署的单元

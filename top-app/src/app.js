@@ -1,13 +1,13 @@
-import { teamA } from "team-a";
-import { teamB } from "team-b";
-import $ from "jquery";
+import { teamA } from "@micro-frontend-demo/team-a";
+import { teamB } from "@micro-frontend-demo/team-b";
+// import $ from "jquery";
 
 teamA();
 
 teamB();
 
-$("#app").html("loading lodash...");
+// $("#app").html("loading lodash...");
 
-import("lodash").then(({ default: _ }) => {
-  $("#app").html(`jQuery and ${_.capitalize("lodash")} works!`);
-});
+// import("lodash").then(({ default: _ }) => {
+//   $("#app").html(`jQuery and ${_.capitalize("lodash")} works!`);
+// });

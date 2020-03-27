@@ -1,0 +1,14 @@
+{
+  "resolve": {
+    "@jspm/core": "npm:@jspm/core@1.0.4",
+    "@micro-frontend-demo/team-b": "npm:@micro-frontend-demo/team-b@1.0.0"
+  },
+  "dependencies": {
+    "npm:@jspm/core@1.0.4": {
+      "source": "https://registry.npmjs.org/@jspm/core/-/core-1.0.4.tgz#sha512-HoA6n4sjAEzU3BnGQpaTPXN0tFbzTe6sGHeuF4Yr9ULsheCwnHrBFOawqK4JDWxCEZQRyuqJv0tgNHTP5eLDMw=="
+    },
+    "npm:@micro-frontend-demo/team-b@1.0.0": {
+      "source": "https://registry.npmjs.org/@micro-frontend-demo/team-b/-/team-b-1.0.0.tgz#sha512-9NJNKpV14sja5nkxPWf7UP0mcBZ+TJzMZufoydUL5+R+VyiSdijjXIuG1AM05QgmbTfCujGlvekfbOsErSnZrg=="
+    }
+  }
+}

@@ -1,0 +1,449 @@
+{
+  "imports": {
+    "@empty": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/@empty.js",
+    "@empty.dew": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/@empty.dew.js",
+    "@micro-frontend-demo/shared-lib1": "../jspm_packages/npm/@micro-frontend-demo/shared-lib1@1.0.1/index.js",
+    "@micro-frontend-demo/shared-lib1/": "../jspm_packages/npm/@micro-frontend-demo/shared-lib1@1.0.1/",
+    "@micro-frontend-demo/shared-lib2": "../jspm_packages/npm/@micro-frontend-demo/shared-lib2@1.0.1/index.js",
+    "@micro-frontend-demo/shared-lib2/": "../jspm_packages/npm/@micro-frontend-demo/shared-lib2@1.0.1/",
+    "assert": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/assert.js",
+    "buffer": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/buffer.js",
+    "child_process": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/@empty.js",
+    "cluster": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/@empty.js",
+    "concurrently": "../jspm_packages/npm/concurrently@5.0.0/index.js",
+    "concurrently/": "../jspm_packages/npm/concurrently@5.0.0/",
+    "console": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/console.js",
+    "constants": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/constants.js",
+    "crypto": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/crypto.js",
+    "dgram": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/@empty.js",
+    "dns": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/@empty.js",
+    "domain": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/domain.js",
+    "events": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/events.js",
+    "fs": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/@empty.js",
+    "http": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/http.js",
+    "http-server": "../jspm_packages/npm/http-server@0.11.1/lib/http-server.js",
+    "http-server/": "../jspm_packages/npm/http-server@0.11.1/",
+    "http2": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/http2.js",
+    "https": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/https.js",
+    "module": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/@empty.js",
+    "net": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/@empty.js",
+    "os": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/os.js",
+    "path": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/path.js",
+    "process": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/process.js",
+    "punycode": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/punycode.js",
+    "querystring": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/querystring.js",
+    "readline": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/@empty.js",
+    "repl": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/@empty.js",
+    "rollup": "../jspm_packages/npm/rollup@1.26.5/dist/rollup.js",
+    "rollup-plugin-node-resolve": "../jspm_packages/npm/rollup-plugin-node-resolve@5.2.0/dist/rollup-plugin-node-resolve.cjs.js",
+    "rollup-plugin-node-resolve/": "../jspm_packages/npm/rollup-plugin-node-resolve@5.2.0/",
+    "rollup/": "../jspm_packages/npm/rollup@1.26.5/",
+    "stream": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/stream.js",
+    "string_decoder": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/string_decoder.js",
+    "sys": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/sys.js",
+    "timers": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/timers.js",
+    "tls": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/@empty.js",
+    "tty": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/tty.js",
+    "url": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/url.js",
+    "util": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/util.js",
+    "vm": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/vm.js",
+    "worker_threads": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/worker_threads.js",
+    "zlib": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/zlib.js"
+  },
+  "scopes": {
+    "../jspm_packages/npm/@types/resolve@0.0.8/": {
+      "@types/node": "../jspm_packages/npm/@types/node@12.12.7/index.js",
+      "@types/node/": "../jspm_packages/npm/@types/node@12.12.7/"
+    },
+    "../jspm_packages/npm/ansi-styles@3.2.1/": {
+      "color-convert": "../jspm_packages/npm/color-convert@1.9.3/index.js",
+      "color-convert/": "../jspm_packages/npm/color-convert@1.9.3/"
+    },
+    "../jspm_packages/npm/async@2.6.3/": {
+      "lodash": "../jspm_packages/npm/lodash@4.17.15/lodash.js",
+      "lodash/": "../jspm_packages/npm/lodash@4.17.15/"
+    },
+    "../jspm_packages/npm/chalk@2.4.2/": {
+      "ansi-styles": "../jspm_packages/npm/ansi-styles@3.2.1/index.js",
+      "ansi-styles/": "../jspm_packages/npm/ansi-styles@3.2.1/",
+      "escape-string-regexp": "../jspm_packages/npm/escape-string-regexp@1.0.5/index.js",
+      "escape-string-regexp/": "../jspm_packages/npm/escape-string-regexp@1.0.5/",
+      "supports-color": "../jspm_packages/npm/supports-color@5.5.0/browser.js",
+      "supports-color/": "../jspm_packages/npm/supports-color@5.5.0/",
+      "supports-color/index.dew.js": "../jspm_packages/npm/supports-color@5.5.0/browser.dew.js",
+      "supports-color/index.js": "../jspm_packages/npm/supports-color@5.5.0/browser.js"
+    },
+    "../jspm_packages/npm/cliui@4.1.0/": {
+      "string-width": "../jspm_packages/npm/string-width@2.1.1/index.js",
+      "string-width/": "../jspm_packages/npm/string-width@2.1.1/",
+      "strip-ansi": "../jspm_packages/npm/strip-ansi@4.0.0/index.js",
+      "strip-ansi/": "../jspm_packages/npm/strip-ansi@4.0.0/",
+      "wrap-ansi": "../jspm_packages/npm/wrap-ansi@2.1.0/index.js",
+      "wrap-ansi/": "../jspm_packages/npm/wrap-ansi@2.1.0/"
+    },
+    "../jspm_packages/npm/color-convert@1.9.3/": {
+      "color-name": "../jspm_packages/npm/color-name@1.1.3/index.js",
+      "color-name/": "../jspm_packages/npm/color-name@1.1.3/"
+    },
+    "../jspm_packages/npm/concurrently@5.0.0/": {
+      "chalk": "../jspm_packages/npm/chalk@2.4.2/index.js",
+      "chalk/": "../jspm_packages/npm/chalk@2.4.2/",
+      "date-fns": "../jspm_packages/npm/date-fns@2.7.0/index.js",
+      "date-fns/": "../jspm_packages/npm/date-fns@2.7.0/",
+      "lodash": "../jspm_packages/npm/lodash@4.17.15/lodash.js",
+      "lodash/": "../jspm_packages/npm/lodash@4.17.15/",
+      "read-pkg": "../jspm_packages/npm/read-pkg@4.0.1/index.js",
+      "read-pkg/": "../jspm_packages/npm/read-pkg@4.0.1/",
+      "rxjs": "../jspm_packages/npm/rxjs@6.5.3/index.js",
+      "rxjs/": "../jspm_packages/npm/rxjs@6.5.3/",
+      "spawn-command": "../jspm_packages/npm/spawn-command@0.0.2-1/lib/spawn-command.js",
+      "spawn-command/": "../jspm_packages/npm/spawn-command@0.0.2-1/",
+      "supports-color": "../jspm_packages/npm/supports-color@4.5.0/browser.js",
+      "supports-color/": "../jspm_packages/npm/supports-color@4.5.0/",
+      "supports-color/index.dew.js": "../jspm_packages/npm/supports-color@4.5.0/browser.dew.js",
+      "supports-color/index.js": "../jspm_packages/npm/supports-color@4.5.0/browser.js",
+      "tree-kill": "../jspm_packages/npm/tree-kill@1.2.1/index.js",
+      "tree-kill/": "../jspm_packages/npm/tree-kill@1.2.1/",
+      "yargs": "../jspm_packages/npm/yargs@12.0.5/index.js",
+      "yargs/": "../jspm_packages/npm/yargs@12.0.5/"
+    },
+    "../jspm_packages/npm/cross-spawn@6.0.5/": {
+      "nice-try": "../jspm_packages/npm/nice-try@1.0.5/src/index.js",
+      "nice-try/": "../jspm_packages/npm/nice-try@1.0.5/",
+      "path-key": "../jspm_packages/npm/path-key@2.0.1/index.js",
+      "path-key/": "../jspm_packages/npm/path-key@2.0.1/",
+      "semver": "../jspm_packages/npm/semver@5.7.1/semver.js",
+      "semver/": "../jspm_packages/npm/semver@5.7.1/",
+      "shebang-command": "../jspm_packages/npm/shebang-command@1.2.0/index.js",
+      "shebang-command/": "../jspm_packages/npm/shebang-command@1.2.0/",
+      "which": "../jspm_packages/npm/which@1.3.1/which.js",
+      "which/": "../jspm_packages/npm/which@1.3.1/"
+    },
+    "../jspm_packages/npm/debug@3.2.6/": {
+      "debug": "../jspm_packages/npm/debug@3.2.6/src/browser.js",
+      "debug/": "../jspm_packages/npm/debug@3.2.6/",
+      "debug/index.dew.js": "../jspm_packages/npm/debug@3.2.6/src/browser.dew.js",
+      "debug/src/index.dew.js": "../jspm_packages/npm/debug@3.2.6/src/browser.dew.js",
+      "debug/src/index.js": "../jspm_packages/npm/debug@3.2.6/src/browser.js",
+      "ms": "../jspm_packages/npm/ms@2.1.2/index.js",
+      "ms/": "../jspm_packages/npm/ms@2.1.2/"
+    },
+    "../jspm_packages/npm/ecstatic@3.3.2/": {
+      "he": "../jspm_packages/npm/he@1.2.0/he.js",
+      "he/": "../jspm_packages/npm/he@1.2.0/",
+      "mime": "../jspm_packages/npm/mime@1.6.0/mime.js",
+      "mime/": "../jspm_packages/npm/mime@1.6.0/",
+      "minimist": "../jspm_packages/npm/minimist@1.2.0/index.js",
+      "minimist/": "../jspm_packages/npm/minimist@1.2.0/",
+      "url-join": "../jspm_packages/npm/url-join@2.0.5/lib/url-join.js",
+      "url-join/": "../jspm_packages/npm/url-join@2.0.5/"
+    },
+    "../jspm_packages/npm/end-of-stream@1.4.4/": {
+      "once": "../jspm_packages/npm/once@1.4.0/once.js",
+      "once/": "../jspm_packages/npm/once@1.4.0/"
+    },
+    "../jspm_packages/npm/error-ex@1.3.2/": {
+      "is-arrayish": "../jspm_packages/npm/is-arrayish@0.2.1/index.js",
+      "is-arrayish/": "../jspm_packages/npm/is-arrayish@0.2.1/"
+    },
+    "../jspm_packages/npm/execa@1.0.0/": {
+      "cross-spawn": "../jspm_packages/npm/cross-spawn@6.0.5/index.js",
+      "cross-spawn/": "../jspm_packages/npm/cross-spawn@6.0.5/",
+      "get-stream": "../jspm_packages/npm/get-stream@4.1.0/index.js",
+      "get-stream/": "../jspm_packages/npm/get-stream@4.1.0/",
+      "is-stream": "../jspm_packages/npm/is-stream@1.1.0/index.js",
+      "is-stream/": "../jspm_packages/npm/is-stream@1.1.0/",
+      "npm-run-path": "../jspm_packages/npm/npm-run-path@2.0.2/index.js",
+      "npm-run-path/": "../jspm_packages/npm/npm-run-path@2.0.2/",
+      "p-finally": "../jspm_packages/npm/p-finally@1.0.0/index.js",
+      "p-finally/": "../jspm_packages/npm/p-finally@1.0.0/",
+      "signal-exit": "../jspm_packages/npm/signal-exit@3.0.2/index.js",
+      "signal-exit/": "../jspm_packages/npm/signal-exit@3.0.2/",
+      "strip-eof": "../jspm_packages/npm/strip-eof@1.0.0/index.js",
+      "strip-eof/": "../jspm_packages/npm/strip-eof@1.0.0/"
+    },
+    "../jspm_packages/npm/find-up@3.0.0/": {
+      "locate-path": "../jspm_packages/npm/locate-path@3.0.0/index.js",
+      "locate-path/": "../jspm_packages/npm/locate-path@3.0.0/"
+    },
+    "../jspm_packages/npm/follow-redirects@1.9.0/": {
+      "debug": "../jspm_packages/npm/debug@3.2.6/src/browser.js",
+      "debug/": "../jspm_packages/npm/debug@3.2.6/",
+      "debug/index.dew.js": "../jspm_packages/npm/debug@3.2.6/src/browser.dew.js",
+      "debug/src/index.dew.js": "../jspm_packages/npm/debug@3.2.6/src/browser.dew.js",
+      "debug/src/index.js": "../jspm_packages/npm/debug@3.2.6/src/browser.js"
+    },
+    "../jspm_packages/npm/get-stream@4.1.0/": {
+      "pump": "../jspm_packages/npm/pump@3.0.0/index.js",
+      "pump/": "../jspm_packages/npm/pump@3.0.0/"
+    },
+    "../jspm_packages/npm/http-proxy@1.18.0/": {
+      "eventemitter3": "../jspm_packages/npm/eventemitter3@4.0.0/index.js",
+      "eventemitter3/": "../jspm_packages/npm/eventemitter3@4.0.0/",
+      "follow-redirects": "../jspm_packages/npm/follow-redirects@1.9.0/index.js",
+      "follow-redirects/": "../jspm_packages/npm/follow-redirects@1.9.0/",
+      "requires-port": "../jspm_packages/npm/requires-port@1.0.0/index.js",
+      "requires-port/": "../jspm_packages/npm/requires-port@1.0.0/"
+    },
+    "../jspm_packages/npm/http-server@0.11.1/": {
+      "colors": "../jspm_packages/npm/colors@1.0.3/lib/index.js",
+      "colors/": "../jspm_packages/npm/colors@1.0.3/",
+      "corser": "../jspm_packages/npm/corser@2.0.1/lib/corser.js",
+      "corser/": "../jspm_packages/npm/corser@2.0.1/",
+      "ecstatic": "../jspm_packages/npm/ecstatic@3.3.2/lib/ecstatic.js",
+      "ecstatic/": "../jspm_packages/npm/ecstatic@3.3.2/",
+      "http-proxy": "../jspm_packages/npm/http-proxy@1.18.0/index.js",
+      "http-proxy/": "../jspm_packages/npm/http-proxy@1.18.0/",
+      "opener": "../jspm_packages/npm/opener@1.4.3/opener.js",
+      "opener/": "../jspm_packages/npm/opener@1.4.3/",
+      "optimist": "../jspm_packages/npm/optimist@0.6.1/index.js",
+      "optimist/": "../jspm_packages/npm/optimist@0.6.1/",
+      "portfinder": "../jspm_packages/npm/portfinder@1.0.25/lib/portfinder.js",
+      "portfinder/": "../jspm_packages/npm/portfinder@1.0.25/",
+      "union": "../jspm_packages/npm/union@0.4.6/lib/index.js",
+      "union/": "../jspm_packages/npm/union@0.4.6/"
+    },
+    "../jspm_packages/npm/is-fullwidth-code-point@1.0.0/": {
+      "number-is-nan": "../jspm_packages/npm/number-is-nan@1.0.1/index.js",
+      "number-is-nan/": "../jspm_packages/npm/number-is-nan@1.0.1/"
+    },
+    "../jspm_packages/npm/lcid@2.0.0/": {
+      "invert-kv": "../jspm_packages/npm/invert-kv@2.0.0/index.js",
+      "invert-kv/": "../jspm_packages/npm/invert-kv@2.0.0/"
+    },
+    "../jspm_packages/npm/locate-path@3.0.0/": {
+      "p-locate": "../jspm_packages/npm/p-locate@3.0.0/index.js",
+      "p-locate/": "../jspm_packages/npm/p-locate@3.0.0/",
+      "path-exists": "../jspm_packages/npm/path-exists@3.0.0/index.js",
+      "path-exists/": "../jspm_packages/npm/path-exists@3.0.0/"
+    },
+    "../jspm_packages/npm/map-age-cleaner@0.1.3/": {
+      "p-defer": "../jspm_packages/npm/p-defer@1.0.0/index.js",
+      "p-defer/": "../jspm_packages/npm/p-defer@1.0.0/"
+    },
+    "../jspm_packages/npm/mem@4.3.0/": {
+      "map-age-cleaner": "../jspm_packages/npm/map-age-cleaner@0.1.3/dist/index.js",
+      "map-age-cleaner/": "../jspm_packages/npm/map-age-cleaner@0.1.3/",
+      "mimic-fn": "../jspm_packages/npm/mimic-fn@2.1.0/index.js",
+      "mimic-fn/": "../jspm_packages/npm/mimic-fn@2.1.0/",
+      "p-is-promise": "../jspm_packages/npm/p-is-promise@2.1.0/index.js",
+      "p-is-promise/": "../jspm_packages/npm/p-is-promise@2.1.0/"
+    },
+    "../jspm_packages/npm/mkdirp@0.5.1/": {
+      "minimist": "../jspm_packages/npm/minimist@0.0.8/index.js",
+      "minimist/": "../jspm_packages/npm/minimist@0.0.8/"
+    },
+    "../jspm_packages/npm/normalize-package-data@2.5.0/": {
+      "hosted-git-info": "../jspm_packages/npm/hosted-git-info@2.8.5/index.js",
+      "hosted-git-info/": "../jspm_packages/npm/hosted-git-info@2.8.5/",
+      "resolve": "../jspm_packages/npm/resolve@1.12.0/index.js",
+      "resolve/": "../jspm_packages/npm/resolve@1.12.0/",
+      "semver": "../jspm_packages/npm/semver@5.7.1/semver.js",
+      "semver/": "../jspm_packages/npm/semver@5.7.1/",
+      "validate-npm-package-license": "../jspm_packages/npm/validate-npm-package-license@3.0.4/index.js",
+      "validate-npm-package-license/": "../jspm_packages/npm/validate-npm-package-license@3.0.4/"
+    },
+    "../jspm_packages/npm/npm-run-path@2.0.2/": {
+      "path-key": "../jspm_packages/npm/path-key@2.0.1/index.js",
+      "path-key/": "../jspm_packages/npm/path-key@2.0.1/"
+    },
+    "../jspm_packages/npm/once@1.4.0/": {
+      "wrappy": "../jspm_packages/npm/wrappy@1.0.2/wrappy.js",
+      "wrappy/": "../jspm_packages/npm/wrappy@1.0.2/"
+    },
+    "../jspm_packages/npm/optimist@0.6.1/": {
+      "minimist": "../jspm_packages/npm/minimist@0.0.10/index.js",
+      "minimist/": "../jspm_packages/npm/minimist@0.0.10/",
+      "wordwrap": "../jspm_packages/npm/wordwrap@0.0.3/index.js",
+      "wordwrap/": "../jspm_packages/npm/wordwrap@0.0.3/"
+    },
+    "../jspm_packages/npm/os-locale@3.1.0/": {
+      "execa": "../jspm_packages/npm/execa@1.0.0/index.js",
+      "execa/": "../jspm_packages/npm/execa@1.0.0/",
+      "lcid": "../jspm_packages/npm/lcid@2.0.0/index.js",
+      "lcid/": "../jspm_packages/npm/lcid@2.0.0/",
+      "mem": "../jspm_packages/npm/mem@4.3.0/index.js",
+      "mem/": "../jspm_packages/npm/mem@4.3.0/"
+    },
+    "../jspm_packages/npm/p-limit@2.2.1/": {
+      "p-try": "../jspm_packages/npm/p-try@2.2.0/index.js",
+      "p-try/": "../jspm_packages/npm/p-try@2.2.0/"
+    },
+    "../jspm_packages/npm/p-locate@3.0.0/": {
+      "p-limit": "../jspm_packages/npm/p-limit@2.2.1/index.js",
+      "p-limit/": "../jspm_packages/npm/p-limit@2.2.1/"
+    },
+    "../jspm_packages/npm/parse-json@4.0.0/": {
+      "error-ex": "../jspm_packages/npm/error-ex@1.3.2/index.js",
+      "error-ex/": "../jspm_packages/npm/error-ex@1.3.2/",
+      "json-parse-better-errors": "../jspm_packages/npm/json-parse-better-errors@1.0.2/index.js",
+      "json-parse-better-errors/": "../jspm_packages/npm/json-parse-better-errors@1.0.2/"
+    },
+    "../jspm_packages/npm/portfinder@1.0.25/": {
+      "async": "../jspm_packages/npm/async@2.6.3/dist/async.js",
+      "async/": "../jspm_packages/npm/async@2.6.3/",
+      "debug": "../jspm_packages/npm/debug@3.2.6/src/browser.js",
+      "debug/": "../jspm_packages/npm/debug@3.2.6/",
+      "debug/index.dew.js": "../jspm_packages/npm/debug@3.2.6/src/browser.dew.js",
+      "debug/src/index.dew.js": "../jspm_packages/npm/debug@3.2.6/src/browser.dew.js",
+      "debug/src/index.js": "../jspm_packages/npm/debug@3.2.6/src/browser.js",
+      "mkdirp": "../jspm_packages/npm/mkdirp@0.5.1/index.js",
+      "mkdirp/": "../jspm_packages/npm/mkdirp@0.5.1/"
+    },
+    "../jspm_packages/npm/pump@3.0.0/": {
+      "end-of-stream": "../jspm_packages/npm/end-of-stream@1.4.4/index.js",
+      "end-of-stream/": "../jspm_packages/npm/end-of-stream@1.4.4/",
+      "fs": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/@empty.js",
+      "once": "../jspm_packages/npm/once@1.4.0/once.js",
+      "once/": "../jspm_packages/npm/once@1.4.0/",
+      "pump": "../jspm_packages/npm/pump@3.0.0/index.js",
+      "pump/": "../jspm_packages/npm/pump@3.0.0/"
+    },
+    "../jspm_packages/npm/read-pkg@4.0.1/": {
+      "normalize-package-data": "../jspm_packages/npm/normalize-package-data@2.5.0/lib/normalize.js",
+      "normalize-package-data/": "../jspm_packages/npm/normalize-package-data@2.5.0/",
+      "parse-json": "../jspm_packages/npm/parse-json@4.0.0/index.js",
+      "parse-json/": "../jspm_packages/npm/parse-json@4.0.0/",
+      "pify": "../jspm_packages/npm/pify@3.0.0/index.js",
+      "pify/": "../jspm_packages/npm/pify@3.0.0/"
+    },
+    "../jspm_packages/npm/resolve@1.12.0/": {
+      "path-parse": "../jspm_packages/npm/path-parse@1.0.6/index.js",
+      "path-parse/": "../jspm_packages/npm/path-parse@1.0.6/"
+    },
+    "../jspm_packages/npm/rollup-plugin-node-resolve@5.2.0/": {
+      "@types/resolve": "../jspm_packages/npm/@types/resolve@0.0.8/index.js",
+      "@types/resolve/": "../jspm_packages/npm/@types/resolve@0.0.8/",
+      "builtin-modules": "../jspm_packages/npm/builtin-modules@3.1.0/index.js",
+      "builtin-modules/": "../jspm_packages/npm/builtin-modules@3.1.0/",
+      "is-module": "../jspm_packages/npm/is-module@1.0.0/index.js",
+      "is-module/": "../jspm_packages/npm/is-module@1.0.0/",
+      "resolve": "../jspm_packages/npm/resolve@1.12.0/index.js",
+      "resolve/": "../jspm_packages/npm/resolve@1.12.0/",
+      "rollup-pluginutils": "../jspm_packages/npm/rollup-pluginutils@2.8.2/dist/pluginutils.cjs.js",
+      "rollup-pluginutils/": "../jspm_packages/npm/rollup-pluginutils@2.8.2/"
+    },
+    "../jspm_packages/npm/rollup-pluginutils@2.8.2/": {
+      "estree-walker": "../jspm_packages/npm/estree-walker@0.6.1/dist/estree-walker.umd.js",
+      "estree-walker/": "../jspm_packages/npm/estree-walker@0.6.1/"
+    },
+    "../jspm_packages/npm/rollup@1.26.5/": {
+      "@types/estree": "../jspm_packages/npm/@types/estree@0.0.39/index.js",
+      "@types/estree/": "../jspm_packages/npm/@types/estree@0.0.39/",
+      "@types/node": "../jspm_packages/npm/@types/node@12.12.7/index.js",
+      "@types/node/": "../jspm_packages/npm/@types/node@12.12.7/",
+      "acorn": "../jspm_packages/npm/acorn@7.1.0/dist/acorn.js",
+      "acorn/": "../jspm_packages/npm/acorn@7.1.0/"
+    },
+    "../jspm_packages/npm/rxjs@6.5.3/": {
+      "tslib": "../jspm_packages/npm/tslib@1.10.0/tslib.js",
+      "tslib/": "../jspm_packages/npm/tslib@1.10.0/"
+    },
+    "../jspm_packages/npm/shebang-command@1.2.0/": {
+      "shebang-regex": "../jspm_packages/npm/shebang-regex@1.0.0/index.js",
+      "shebang-regex/": "../jspm_packages/npm/shebang-regex@1.0.0/"
+    },
+    "../jspm_packages/npm/spdx-correct@3.1.0/": {
+      "spdx-expression-parse": "../jspm_packages/npm/spdx-expression-parse@3.0.0/index.js",
+      "spdx-expression-parse/": "../jspm_packages/npm/spdx-expression-parse@3.0.0/",
+      "spdx-license-ids": "../jspm_packages/npm/spdx-license-ids@3.0.5/index.js",
+      "spdx-license-ids/": "../jspm_packages/npm/spdx-license-ids@3.0.5/"
+    },
+    "../jspm_packages/npm/spdx-expression-parse@3.0.0/": {
+      "spdx-exceptions": "../jspm_packages/npm/spdx-exceptions@2.2.0/index.js",
+      "spdx-exceptions/": "../jspm_packages/npm/spdx-exceptions@2.2.0/",
+      "spdx-license-ids": "../jspm_packages/npm/spdx-license-ids@3.0.5/index.js",
+      "spdx-license-ids/": "../jspm_packages/npm/spdx-license-ids@3.0.5/"
+    },
+    "../jspm_packages/npm/string-width@1.0.2/": {
+      "code-point-at": "../jspm_packages/npm/code-point-at@1.1.0/index.js",
+      "code-point-at/": "../jspm_packages/npm/code-point-at@1.1.0/",
+      "is-fullwidth-code-point": "../jspm_packages/npm/is-fullwidth-code-point@1.0.0/index.js",
+      "is-fullwidth-code-point/": "../jspm_packages/npm/is-fullwidth-code-point@1.0.0/",
+      "strip-ansi": "../jspm_packages/npm/strip-ansi@3.0.1/index.js",
+      "strip-ansi/": "../jspm_packages/npm/strip-ansi@3.0.1/"
+    },
+    "../jspm_packages/npm/string-width@2.1.1/": {
+      "is-fullwidth-code-point": "../jspm_packages/npm/is-fullwidth-code-point@2.0.0/index.js",
+      "is-fullwidth-code-point/": "../jspm_packages/npm/is-fullwidth-code-point@2.0.0/",
+      "strip-ansi": "../jspm_packages/npm/strip-ansi@4.0.0/index.js",
+      "strip-ansi/": "../jspm_packages/npm/strip-ansi@4.0.0/"
+    },
+    "../jspm_packages/npm/strip-ansi@3.0.1/": {
+      "ansi-regex": "../jspm_packages/npm/ansi-regex@2.1.1/index.js",
+      "ansi-regex/": "../jspm_packages/npm/ansi-regex@2.1.1/"
+    },
+    "../jspm_packages/npm/strip-ansi@4.0.0/": {
+      "ansi-regex": "../jspm_packages/npm/ansi-regex@3.0.0/index.js",
+      "ansi-regex/": "../jspm_packages/npm/ansi-regex@3.0.0/"
+    },
+    "../jspm_packages/npm/supports-color@4.5.0/": {
+      "has-flag": "../jspm_packages/npm/has-flag@2.0.0/index.js",
+      "has-flag/": "../jspm_packages/npm/has-flag@2.0.0/",
+      "supports-color": "../jspm_packages/npm/supports-color@4.5.0/browser.js",
+      "supports-color/": "../jspm_packages/npm/supports-color@4.5.0/",
+      "supports-color/index.dew.js": "../jspm_packages/npm/supports-color@4.5.0/browser.dew.js",
+      "supports-color/index.js": "../jspm_packages/npm/supports-color@4.5.0/browser.js"
+    },
+    "../jspm_packages/npm/supports-color@5.5.0/": {
+      "has-flag": "../jspm_packages/npm/has-flag@3.0.0/index.js",
+      "has-flag/": "../jspm_packages/npm/has-flag@3.0.0/",
+      "supports-color": "../jspm_packages/npm/supports-color@5.5.0/browser.js",
+      "supports-color/": "../jspm_packages/npm/supports-color@5.5.0/",
+      "supports-color/index.dew.js": "../jspm_packages/npm/supports-color@5.5.0/browser.dew.js",
+      "supports-color/index.js": "../jspm_packages/npm/supports-color@5.5.0/browser.js"
+    },
+    "../jspm_packages/npm/union@0.4.6/": {
+      "qs": "../jspm_packages/npm/qs@2.3.3/index.js",
+      "qs/": "../jspm_packages/npm/qs@2.3.3/"
+    },
+    "../jspm_packages/npm/validate-npm-package-license@3.0.4/": {
+      "spdx-correct": "../jspm_packages/npm/spdx-correct@3.1.0/index.js",
+      "spdx-correct/": "../jspm_packages/npm/spdx-correct@3.1.0/",
+      "spdx-expression-parse": "../jspm_packages/npm/spdx-expression-parse@3.0.0/index.js",
+      "spdx-expression-parse/": "../jspm_packages/npm/spdx-expression-parse@3.0.0/"
+    },
+    "../jspm_packages/npm/which@1.3.1/": {
+      "isexe": "../jspm_packages/npm/isexe@2.0.0/index.js",
+      "isexe/": "../jspm_packages/npm/isexe@2.0.0/"
+    },
+    "../jspm_packages/npm/wrap-ansi@2.1.0/": {
+      "string-width": "../jspm_packages/npm/string-width@1.0.2/index.js",
+      "string-width/": "../jspm_packages/npm/string-width@1.0.2/",
+      "strip-ansi": "../jspm_packages/npm/strip-ansi@3.0.1/index.js",
+      "strip-ansi/": "../jspm_packages/npm/strip-ansi@3.0.1/"
+    },
+    "../jspm_packages/npm/yargs-parser@11.1.1/": {
+      "camelcase": "../jspm_packages/npm/camelcase@5.3.1/index.js",
+      "camelcase/": "../jspm_packages/npm/camelcase@5.3.1/",
+      "decamelize": "../jspm_packages/npm/decamelize@1.2.0/index.js",
+      "decamelize/": "../jspm_packages/npm/decamelize@1.2.0/"
+    },
+    "../jspm_packages/npm/yargs@12.0.5/": {
+      "cliui": "../jspm_packages/npm/cliui@4.1.0/index.js",
+      "cliui/": "../jspm_packages/npm/cliui@4.1.0/",
+      "decamelize": "../jspm_packages/npm/decamelize@1.2.0/index.js",
+      "decamelize/": "../jspm_packages/npm/decamelize@1.2.0/",
+      "find-up": "../jspm_packages/npm/find-up@3.0.0/index.js",
+      "find-up/": "../jspm_packages/npm/find-up@3.0.0/",
+      "get-caller-file": "../jspm_packages/npm/get-caller-file@1.0.3/index.js",
+      "get-caller-file/": "../jspm_packages/npm/get-caller-file@1.0.3/",
+      "os-locale": "../jspm_packages/npm/os-locale@3.1.0/index.js",
+      "os-locale/": "../jspm_packages/npm/os-locale@3.1.0/",
+      "require-directory": "../jspm_packages/npm/require-directory@2.1.1/index.js",
+      "require-directory/": "../jspm_packages/npm/require-directory@2.1.1/",
+      "require-main-filename": "../jspm_packages/npm/require-main-filename@1.0.1/index.js",
+      "require-main-filename/": "../jspm_packages/npm/require-main-filename@1.0.1/",
+      "set-blocking": "../jspm_packages/npm/set-blocking@2.0.0/index.js",
+      "set-blocking/": "../jspm_packages/npm/set-blocking@2.0.0/",
+      "string-width": "../jspm_packages/npm/string-width@2.1.1/index.js",
+      "string-width/": "../jspm_packages/npm/string-width@2.1.1/",
+      "which-module": "../jspm_packages/npm/which-module@2.0.0/index.js",
+      "which-module/": "../jspm_packages/npm/which-module@2.0.0/",
+      "y18n": "../jspm_packages/npm/y18n@4.0.0/index.js",
+      "y18n/": "../jspm_packages/npm/y18n@4.0.0/",
+      "yargs-parser": "../jspm_packages/npm/yargs-parser@11.1.1/index.js",
+      "yargs-parser/": "../jspm_packages/npm/yargs-parser@11.1.1/"
+    }
+  }
+}

@@ -1,5 +1,5 @@
-import { lib1 } from "shared-lib1";
-import { lib2 } from "shared-lib2";
+import { lib1 } from "@micro-frontend-demo/shared-lib1";
+import { lib2 } from "@micro-frontend-demo/shared-lib2";
 
 export function teamB() {
   console.log("teamB");
@@ -7,6 +7,4 @@ export function teamB() {
   lib2();
 }
 
-export function teamBHelper() {
-  console.log("teamBHelper");
-}
+export * from "./helper";

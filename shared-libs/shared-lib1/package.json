@@ -1,0 +1,19 @@
+{
+  "name": "@micro-frontend-demo/shared-lib1",
+  "version": "2.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "rm -rf dist && rollup -c rollup.config.js",
+    "serve": "npm run build && http-server -p 8001 --cors"
+  },
+  "devDependencies": {
+    "http-server": "^0.11.1",
+    "rollup": "^1.26.0",
+    "rollup-plugin-commonjs": "^10.1.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  }
+}

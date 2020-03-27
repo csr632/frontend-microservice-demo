@@ -4,15 +4,27 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf dist && rollup -c rollup.config.js && rollup -c rollup.config.infrastructure.js",
-    "serve": "npm run build && http-server -p 8004 --cors"
-  },
-  "devDependencies": {
-    "http-server": "^0.11.1",
-    "rollup": "^1.26.0",
-    "rollup-plugin-node-resolve": "^5.2.0"
+    "dev-map": "rm -f dev/deps-import-map.json && jspm map -o dev/deps-import-map.json",
+    "dev-serve": "npm run dev-map && http-server -p 8004 -c-1",
+    "build": "rm -rf dist && rollup -c rollup.config.js && npm run prod-map",
+    "serve": "npm run build && http-server -p 8004 -c-1",
+    "prod-map": "jspm map -o dist/import-map.json --production"
   },
   "dependencies": {
+    "@jspm/core": "^1.0.4",
+    "@micro-frontend-demo/team-a": "^1.0.3",
+    "@micro-frontend-demo/team-b": "^1.0.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/plugin-transform-modules-systemjs": "^7.7.0",
+    "@babel/preset-env": "^7.7.1",
+    "@jspm/resolve": "^1.0.0",
+    "http-server": "~0.11.1",
+    "rollup": "^1.26.0",
+    "rollup-plugin-babel": "^4.3.3",
+    "rollup-plugin-node-resolve": "^5.2.0",
     "systemjs": "^6.1.4"
-  }
+  },
+  "type": "module"
 }

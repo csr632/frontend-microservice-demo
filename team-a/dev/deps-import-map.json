@@ -1,0 +1,136 @@
+{
+  "imports": {
+    "@empty": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/@empty.js",
+    "@empty.dew": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/@empty.dew.js",
+    "@micro-frontend-demo/shared-lib1": "../jspm_packages/npm/@micro-frontend-demo/shared-lib1@2.0.0/index.js",
+    "@micro-frontend-demo/shared-lib1/": "../jspm_packages/npm/@micro-frontend-demo/shared-lib1@2.0.0/",
+    "@micro-frontend-demo/shared-lib2": "../jspm_packages/npm/@micro-frontend-demo/shared-lib2@1.0.1/index.js",
+    "@micro-frontend-demo/shared-lib2/": "../jspm_packages/npm/@micro-frontend-demo/shared-lib2@1.0.1/",
+    "@micro-frontend-demo/team-b": "../jspm_packages/npm/@micro-frontend-demo/team-b@1.0.4/dist/bundle.js",
+    "@micro-frontend-demo/team-b/": "../jspm_packages/npm/@micro-frontend-demo/team-b@1.0.4/",
+    "assert": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/assert.js",
+    "buffer": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/buffer.js",
+    "child_process": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/@empty.js",
+    "cluster": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/@empty.js",
+    "console": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/console.js",
+    "constants": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/constants.js",
+    "crypto": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/crypto.js",
+    "dgram": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/@empty.js",
+    "dns": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/@empty.js",
+    "domain": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/domain.js",
+    "events": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/events.js",
+    "fs": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/@empty.js",
+    "http": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/http.js",
+    "http-server": "../jspm_packages/npm/http-server@0.11.1/lib/http-server.js",
+    "http-server/": "../jspm_packages/npm/http-server@0.11.1/",
+    "http2": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/http2.js",
+    "https": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/https.js",
+    "module": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/@empty.js",
+    "net": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/@empty.js",
+    "os": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/os.js",
+    "path": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/path.js",
+    "process": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/process.js",
+    "punycode": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/punycode.js",
+    "querystring": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/querystring.js",
+    "readline": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/@empty.js",
+    "repl": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/@empty.js",
+    "stream": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/stream.js",
+    "string_decoder": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/string_decoder.js",
+    "sys": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/sys.js",
+    "timers": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/timers.js",
+    "tls": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/@empty.js",
+    "tty": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/tty.js",
+    "url": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/url.js",
+    "util": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/util.js",
+    "vm": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/vm.js",
+    "worker_threads": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/worker_threads.js",
+    "zlib": "../jspm_packages/npm/@jspm/core@1.0.4/nodelibs/zlib.js"
+  },
+  "scopes": {
+    "../jspm_packages/npm/@micro-frontend-demo/team-b@1.0.4/": {
+      "@micro-frontend-demo/shared-lib1": "../jspm_packages/npm/@micro-frontend-demo/shared-lib1@1.0.1/index.js",
+      "@micro-frontend-demo/shared-lib1/": "../jspm_packages/npm/@micro-frontend-demo/shared-lib1@1.0.1/"
+    },
+    "../jspm_packages/npm/async@2.6.3/": {
+      "lodash": "../jspm_packages/npm/lodash@4.17.15/lodash.js",
+      "lodash/": "../jspm_packages/npm/lodash@4.17.15/"
+    },
+    "../jspm_packages/npm/debug@3.2.6/": {
+      "debug": "../jspm_packages/npm/debug@3.2.6/src/browser.js",
+      "debug/": "../jspm_packages/npm/debug@3.2.6/",
+      "debug/index.dew.js": "../jspm_packages/npm/debug@3.2.6/src/browser.dew.js",
+      "debug/src/index.dew.js": "../jspm_packages/npm/debug@3.2.6/src/browser.dew.js",
+      "debug/src/index.js": "../jspm_packages/npm/debug@3.2.6/src/browser.js",
+      "ms": "../jspm_packages/npm/ms@2.1.2/index.js",
+      "ms/": "../jspm_packages/npm/ms@2.1.2/"
+    },
+    "../jspm_packages/npm/ecstatic@3.3.2/": {
+      "he": "../jspm_packages/npm/he@1.2.0/he.js",
+      "he/": "../jspm_packages/npm/he@1.2.0/",
+      "mime": "../jspm_packages/npm/mime@1.6.0/mime.js",
+      "mime/": "../jspm_packages/npm/mime@1.6.0/",
+      "minimist": "../jspm_packages/npm/minimist@1.2.0/index.js",
+      "minimist/": "../jspm_packages/npm/minimist@1.2.0/",
+      "url-join": "../jspm_packages/npm/url-join@2.0.5/lib/url-join.js",
+      "url-join/": "../jspm_packages/npm/url-join@2.0.5/"
+    },
+    "../jspm_packages/npm/follow-redirects@1.9.0/": {
+      "debug": "../jspm_packages/npm/debug@3.2.6/src/browser.js",
+      "debug/": "../jspm_packages/npm/debug@3.2.6/",
+      "debug/index.dew.js": "../jspm_packages/npm/debug@3.2.6/src/browser.dew.js",
+      "debug/src/index.dew.js": "../jspm_packages/npm/debug@3.2.6/src/browser.dew.js",
+      "debug/src/index.js": "../jspm_packages/npm/debug@3.2.6/src/browser.js"
+    },
+    "../jspm_packages/npm/http-proxy@1.18.0/": {
+      "eventemitter3": "../jspm_packages/npm/eventemitter3@4.0.0/index.js",
+      "eventemitter3/": "../jspm_packages/npm/eventemitter3@4.0.0/",
+      "follow-redirects": "../jspm_packages/npm/follow-redirects@1.9.0/index.js",
+      "follow-redirects/": "../jspm_packages/npm/follow-redirects@1.9.0/",
+      "requires-port": "../jspm_packages/npm/requires-port@1.0.0/index.js",
+      "requires-port/": "../jspm_packages/npm/requires-port@1.0.0/"
+    },
+    "../jspm_packages/npm/http-server@0.11.1/": {
+      "colors": "../jspm_packages/npm/colors@1.0.3/lib/index.js",
+      "colors/": "../jspm_packages/npm/colors@1.0.3/",
+      "corser": "../jspm_packages/npm/corser@2.0.1/lib/corser.js",
+      "corser/": "../jspm_packages/npm/corser@2.0.1/",
+      "ecstatic": "../jspm_packages/npm/ecstatic@3.3.2/lib/ecstatic.js",
+      "ecstatic/": "../jspm_packages/npm/ecstatic@3.3.2/",
+      "http-proxy": "../jspm_packages/npm/http-proxy@1.18.0/index.js",
+      "http-proxy/": "../jspm_packages/npm/http-proxy@1.18.0/",
+      "opener": "../jspm_packages/npm/opener@1.4.3/opener.js",
+      "opener/": "../jspm_packages/npm/opener@1.4.3/",
+      "optimist": "../jspm_packages/npm/optimist@0.6.1/index.js",
+      "optimist/": "../jspm_packages/npm/optimist@0.6.1/",
+      "portfinder": "../jspm_packages/npm/portfinder@1.0.25/lib/portfinder.js",
+      "portfinder/": "../jspm_packages/npm/portfinder@1.0.25/",
+      "union": "../jspm_packages/npm/union@0.4.6/lib/index.js",
+      "union/": "../jspm_packages/npm/union@0.4.6/"
+    },
+    "../jspm_packages/npm/mkdirp@0.5.1/": {
+      "minimist": "../jspm_packages/npm/minimist@0.0.8/index.js",
+      "minimist/": "../jspm_packages/npm/minimist@0.0.8/"
+    },
+    "../jspm_packages/npm/optimist@0.6.1/": {
+      "minimist": "../jspm_packages/npm/minimist@0.0.10/index.js",
+      "minimist/": "../jspm_packages/npm/minimist@0.0.10/",
+      "wordwrap": "../jspm_packages/npm/wordwrap@0.0.3/index.js",
+      "wordwrap/": "../jspm_packages/npm/wordwrap@0.0.3/"
+    },
+    "../jspm_packages/npm/portfinder@1.0.25/": {
+      "async": "../jspm_packages/npm/async@2.6.3/dist/async.js",
+      "async/": "../jspm_packages/npm/async@2.6.3/",
+      "debug": "../jspm_packages/npm/debug@3.2.6/src/browser.js",
+      "debug/": "../jspm_packages/npm/debug@3.2.6/",
+      "debug/index.dew.js": "../jspm_packages/npm/debug@3.2.6/src/browser.dew.js",
+      "debug/src/index.dew.js": "../jspm_packages/npm/debug@3.2.6/src/browser.dew.js",
+      "debug/src/index.js": "../jspm_packages/npm/debug@3.2.6/src/browser.js",
+      "mkdirp": "../jspm_packages/npm/mkdirp@0.5.1/index.js",
+      "mkdirp/": "../jspm_packages/npm/mkdirp@0.5.1/"
+    },
+    "../jspm_packages/npm/union@0.4.6/": {
+      "qs": "../jspm_packages/npm/qs@2.3.3/index.js",
+      "qs/": "../jspm_packages/npm/qs@2.3.3/"
+    }
+  }
+}

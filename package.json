@@ -2,6 +2,9 @@
   "name": "rollup-micro-frontend",
   "version": "1.0.0",
   "main": "index.js",
+  "dependencies": {
+    "@micro-frontend-demo/team-b": "1.0.0"
+  },
   "repository": "git@github.com:csr632/rollup-micro-frontend.git",
   "author": "Sirui Chen <632882184@qq.com>",
   "license": "MIT",
@@ -18,7 +21,9 @@
     "serveAll": "concurrently -k \"npm:serve:*\""
   },
   "devDependencies": {
+    "@jspm/core": "^1.0.4",
     "concurrently": "^5.0.0",
     "serve": "^11.2.0"
-  }
+  },
+  "type": "module"
 }

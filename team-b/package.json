@@ -1,15 +1,28 @@
 {
-  "name": "team-b",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "@micro-frontend-demo/team-b",
+  "version": "1.0.4",
+  "main": "dist/bundle.js",
   "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
-    "build": "rm -rf dist && rollup -c rollup.config.js",
-    "serve": "npm run build && http-server -p 8003 --cors"
+    "dev-map": "rm -f dev/deps-import-map.json && jspm map -o dev/deps-import-map.json",
+    "serve": "http-server -p 8002 -c-1",
+    "dev": "concurrently \"npm:dev-map\" \"npm:serve\" \"npm:bundle:w\"",
+    "bundle": "rm -rf dist && rollup -c",
+    "bundle:w": "rm -rf dist && rollup -cw"
+  },
+  "dependencies": {
+    "@micro-frontend-demo/shared-lib1": "^1.0.1",
+    "@micro-frontend-demo/shared-lib2": "^1.0.1"
   },
   "devDependencies": {
-    "http-server": "^0.11.1",
-    "rollup": "^1.26.0",
+    "@jspm/core": "^1.0.4",
+    "concurrently": "^5.0.0",
+    "http-server": "~0.11.1",
+    "rollup": "^1.26.5",
     "rollup-plugin-node-resolve": "^5.2.0"
-  }
+  },
+  "type": "module"
 }

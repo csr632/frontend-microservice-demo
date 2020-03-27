@@ -1,3 +1,3 @@
 import "systemjs/dist/system";
 
-System.import("top-app");
+System.import("./dist/app.js");

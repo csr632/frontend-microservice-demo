@@ -1,0 +1,5 @@
+{
+  "imports": {
+    "team-a": "../src/index.js"
+  }
+}
