@@ -1,15 +1,19 @@
 {
-  "name": "team-b",
-  "version": "1.0.0",
-  "main": "index.js",
+  "name": "@micro-frontend-demo/team-b",
+  "version": "2.0.3",
+  "main": "dist/index.js",
   "license": "MIT",
+  "microFrontendProvider": {
+    "entryResolver": "./entryResolver.js"
+  },
   "scripts": {
+    "prepare": "npm run build",
     "build": "rm -rf dist && rollup -c rollup.config.js",
     "serve": "npm run build && http-server -p 8003 --cors"
   },
   "devDependencies": {
-    "http-server": "^0.11.1",
-    "rollup": "^1.26.0",
+    "http-server": "^0.12.1",
+    "rollup": "^2.2.0",
     "rollup-plugin-node-resolve": "^5.2.0"
   }
 }

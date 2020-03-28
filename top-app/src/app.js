@@ -1,13 +1,9 @@
-import { teamA } from "team-a";
-import { teamB } from "team-b";
-import $ from "jquery";
+import "systemjs/dist/system";
+import { installImportMap } from "./utils";
+import importMap from "@@mfe-import-map.json";
 
-teamA();
+installImportMap(importMap);
 
-teamB();
-
-$("#app").html("loading lodash...");
-
-import("lodash").then(({ default: _ }) => {
-  $("#app").html(`jQuery and ${_.capitalize("lodash")} works!`);
+import("@micro-frontend-demo/team-b").then(({ teamB }) => {
+  teamB();
 });

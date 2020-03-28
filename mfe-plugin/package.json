@@ -1,0 +1,23 @@
+{
+  "name": "rollup-plugin-micro-frontend",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc -w"
+  },
+  "devDependencies": {
+    "@types/fs-extra": "^8.1.0",
+    "@types/resolve": "^1.14.0",
+    "rollup": "^2.2.0",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@rollup/plugin-virtual": "^2.0.1",
+    "@rollup/pluginutils": "^3.0.8",
+    "@types/estree": "^0.0.44",
+    "magic-string": "^0.25.7",
+    "resolve": "^1.15.1"
+  }
+}

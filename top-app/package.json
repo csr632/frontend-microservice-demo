@@ -4,15 +4,17 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "rm -rf dist && rollup -c rollup.config.js && rollup -c rollup.config.infrastructure.js",
+    "debug": "rm -rf dist && npx --node-arg=--inspect-brk rollup -c rollup.config.js",
+    "build": "rm -rf dist && rollup -c rollup.config.js",
     "serve": "npm run build && http-server -p 8004 --cors"
   },
   "devDependencies": {
-    "http-server": "^0.11.1",
-    "rollup": "^1.26.0",
+    "http-server": "^0.12.1",
+    "rollup": "^2.2.0",
     "rollup-plugin-node-resolve": "^5.2.0"
   },
   "dependencies": {
-    "systemjs": "^6.1.4"
+    "jquery2": "npm:jquery@2",
+    "systemjs": "^6.2.6"
   }
 }

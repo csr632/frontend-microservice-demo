@@ -1,6 +1,6 @@
 {
-  "name": "team-a",
-  "version": "1.0.0",
+  "name": "@micro-frontend-demo/team-a",
+  "version": "2.0.0",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -8,8 +8,8 @@
     "serve": "npm run build && http-server -p 8002 --cors"
   },
   "devDependencies": {
-    "http-server": "^0.11.1",
-    "rollup": "^1.26.0",
+    "http-server": "^0.12.1",
+    "rollup": "^2.2.0",
     "rollup-plugin-node-resolve": "^5.2.0"
   }
 }

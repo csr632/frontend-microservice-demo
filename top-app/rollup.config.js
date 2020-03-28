@@ -1,11 +1,19 @@
 import resolve from "rollup-plugin-node-resolve";
+import { mfeNodePlugin } from "rollup-plugin-micro-frontend";
 
 export default {
-  input: ["./src/app.js"],
+  input: { app: "./src/app.js" },
   output: {
+    entryFileNames: "[name].js",
     dir: "./dist",
-    format: "system"
+    format: "iife"
   },
-  plugins: [resolve()],
-  external: ["team-a", "team-b", "jquery", "lodash"]
+  plugins: [
+    mfeNodePlugin({
+      channel: {
+        "@micro-frontend-demo/team-b": "patch"
+      }
+    }),
+    resolve()
+  ]
 };
