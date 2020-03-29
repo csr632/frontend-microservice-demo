@@ -9,10 +9,11 @@ export default {
       format: "es"
     },
     {
-      entryFileNames: "[name].system.js",
-      dir: "./dist",
+      entryFileNames: "[name].js",
+      dir: "./dist/systemjs",
       format: "system"
     }
   ],
-  plugins: [resolve()]
+  plugins: [resolve()],
+  external: ["jquery"]
 };

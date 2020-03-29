@@ -6,7 +6,7 @@ const systemJsModuleMap = {
   "dist/entry2.js": `${URL_PREFIX}entry2.js`
 };
 
-module.exports = ({ modulePath }) => {
+module.exports = ({ consumerPkgJson }) => {
   const res = systemJsModuleMap[modulePath];
   return res;
 };

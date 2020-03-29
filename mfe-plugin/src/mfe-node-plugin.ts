@@ -9,23 +9,22 @@ import { getPackageName } from "./utils";
 import replace from "./replace-plugin";
 
 interface IMfeNodePluginOptions {
-  moduleFormat?: string;
   pkgJsonPath?: string;
   channel?: {
     [importPkgName: string]: any;
   };
-  importMapName?: string;
+  importMapEmit?: string;
 }
 
 const MFE_MODULE_ID_PREFIX = "__MFE__";
 const REPLACE_NAME_WITH_IMPORT_MAP = "__microFrontendImportMap";
+const IMPORT_MAP_MODULE = "@@mfe-import-map.json";
 
 // resolve micro-frontend project from node_modules
 export default function mfeNodePlugin({
-  moduleFormat = "system",
   pkgJsonPath,
   channel,
-  importMapName = "@@mfe-import-map.json"
+  importMapEmit = "mfe-import-map.json"
 }: IMfeNodePluginOptions = {}) {
   const importMap = {
     imports: {} as { [name: string]: string }
@@ -58,7 +57,7 @@ export default function mfeNodePlugin({
           [REPLACE_NAME_WITH_IMPORT_MAP]: () => JSON.stringify(importMap)
         }),
         virtual({
-          [importMapName]: `export default ${REPLACE_NAME_WITH_IMPORT_MAP};`
+          [IMPORT_MAP_MODULE]: `export default ${REPLACE_NAME_WITH_IMPORT_MAP};`
         })
       );
       return {
@@ -101,12 +100,19 @@ export default function mfeNodePlugin({
             ));
             const modulePath = path.relative(resolvedPkgPath, normalResolve);
 
-            const serviceEntryUrl = entryResolver({
+            // resolve the micro-frontend module into a URL
+            const serviceEntryUrl = await entryResolver({
               modulePath,
-              moduleFormat,
               consumerPkgJson: selfPkg.packageJson,
               channel: channel?.[importPkgName]
             });
+
+            if (!serviceEntryUrl || typeof serviceEntryUrl !== "string") {
+              throw new Error(
+                `The entryResolver of micro-frontend "${source}" should return a service URL.`
+              );
+            }
+
             const mapId = `${MFE_MODULE_ID_PREFIX}${importPkgName}/${modulePath}`;
 
             if (
@@ -114,9 +120,10 @@ export default function mfeNodePlugin({
               importMap.imports[mapId] !== serviceEntryUrl
             ) {
               throw new Error(
-                `Same service entry is resolved into different url: "${importMap.imports[mapId]}" and "${serviceEntryUrl}"`
+                `The micro-frontend module "${source}" is resolved into a different url: "${serviceEntryUrl}" v.s. existing "${importMap.imports[mapId]}"`
               );
             }
+            // bind the micro-frontend module with its URL
             importMap.imports[mapId] = serviceEntryUrl;
 
             return {
@@ -136,14 +143,14 @@ export default function mfeNodePlugin({
         };
       return null;
     },
-    // generateBundle() {
-    //   if (importMapName) {
-    //     this.emitFile({
-    //       type: "asset",
-    //       source: JSON.stringify(importMap),
-    //       fileName: importMapName
-    //     });
-    //   }
-    // }
+    generateBundle() {
+      if (importMapEmit) {
+        this.emitFile({
+          type: "asset",
+          source: JSON.stringify(importMap),
+          fileName: importMapEmit
+        });
+      }
+    }
   } as Plugin;
 }
