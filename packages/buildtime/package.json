@@ -1,0 +1,12 @@
+{
+  "name": "mfe-buildtime",
+  "version": "1.0.0",
+  "main": "lib/index.js",
+  "license": "MIT",
+  "scripts": {
+    "prepare": "rm -rf ./lib && tsc"
+  },
+  "devDependencies": {
+    "typescript": "^3.8.3"
+  }
+}

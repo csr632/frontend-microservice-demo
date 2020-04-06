@@ -1,0 +1,20 @@
+{
+  "name": "@micro-frontend-demo/team-a",
+  "version": "2.0.6",
+  "main": "dist/index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf dist loader && rollup -c rollup.config.js",
+    "serve": "npm run build && http-server -p 8002 --cors",
+    "prepare": "npm run build"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "^7.1.1",
+    "http-server": "^0.12.1",
+    "rollup": "^2.2.0",
+    "@rollup/plugin-typescript": "^4.0.0",
+    "tslib": "^1.11.1",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {}
+}

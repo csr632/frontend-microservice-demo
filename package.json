@@ -1,7 +1,12 @@
 {
-  "name": "rollup-micro-frontend",
+  "name": "micro-frontend",
   "version": "1.0.0",
-  "main": "index.js",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "examples/teams/*",
+    "examples/apps/*"
+  ],
   "repository": "git@github.com:csr632/rollup-micro-frontend.git",
   "author": "Sirui Chen <632882184@qq.com>",
   "license": "MIT",
@@ -16,12 +21,5 @@
     "serve:s": "npm run serve --prefix shared-lib",
     "serve:t": "npm run serve --prefix top-app",
     "serveAll": "concurrently -k \"npm:serve:*\""
-  },
-  "devDependencies": {
-    "concurrently": "^5.1.0",
-    "fs-extra": "^9.0.0",
-    "read-pkg": "^5.2.0",
-    "read-pkg-up": "^7.0.1",
-    "serve": "^11.3.0"
   }
 }

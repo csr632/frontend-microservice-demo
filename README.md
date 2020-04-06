@@ -69,3 +69,27 @@ It is recommended to inline import map into HTML file in practise, because:
 
 1. Develop a tool that generates import map from a "microservice declaration" (perhaps introducing a new field in package.json)
 2. Development workflow
+
+# 场景
+
+1. 【必须共享的依赖】top-app 加载 team-b 的微服务。top-app 将 react 注入 team-b
+
+- 如果 team-b 升级依赖的 react 到下一个大版本（比如 react19），那么 team-b 自己也需要升级大版本号。否则， top-app 会将 react18 注入 team-b，导致 team-b 异常。所以 team-b 要升级大版本号，防止 top-app 加载到依赖 react19 的 team-b。
+- 后面 top-app 也要升级大版本的时候，修改 team-b 依赖的大版本号即可。
+- 如果 team-b 还没有发布支持 React19 的版本，top-app 就不能先升级。否则，top-app 会将 react19 注入 team-b，而 team-b 本来是依赖 react18 的，这会造成 team-b 异常。
+
+2. 【非必须共享的依赖】top-app 加载 team-b 的微服务。top-app 依赖 lodash4，team-b 依赖 lodash3。由于 lodash 有多份实例不会造成行为异常（只是浪费一些带宽），因此 top-app 可以使用 team-b，不过要做一些额外工作来让 team-b 拿到正确的依赖：
+
+- top-app 不能将自己的 lodash4 注入 team-b，因为 team-b 期待 lodash3。
+- top-app 需要安装一份 lodash3（安装方式 `yarn add lodash3@npm:lodash@^3.0.0`），然后在加载 team-b 的时候注入依赖：
+
+```js
+import loadsh3 from "loadsh3";
+load("team-b", { lodash: loadsh3 });
+```
+
+3. 【透传依赖】假设 team-a 是一个微服务，这个微服务要加载另一个微服务 team-b，并且 team-b 依赖于 lodash。team-a 可以先从自己的加载方拿到 lodash，然后将它传递给 team-b。
+
+4. 【动态加载】
+
+提前下载 template

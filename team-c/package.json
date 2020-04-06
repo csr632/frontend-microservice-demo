@@ -1,0 +1,18 @@
+{
+  "name": "@micro-frontend-demo/team-a",
+  "version": "2.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "rm -rf dist && rollup -c rollup.config.js",
+    "serve": "npm run build && http-server -p 8002 --cors"
+  },
+  "devDependencies": {
+    "http-server": "^0.12.1",
+    "rollup": "^2.2.0",
+    "rollup-plugin-node-resolve": "^5.2.0"
+  },
+  "dependencies": {
+    "@types/jquery": "^3.3.34"
+  }
+}
