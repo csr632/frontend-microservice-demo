@@ -1,9 +1,12 @@
-import loader from "@micro-frontend-demo/team-a/loader";
+import loadTeamA from "./load-team-a";
 
-export function teamD() {
+export async function teamD() {
   console.log("teamD loading teamA...");
-  loader().then(module => {
-    console.log(module);
-    module.teamA();
-  });
+
+  const moduleA = await loadTeamA();
+  const moduleA_ = await loadTeamA();
+
+  if (moduleA_ !== moduleA) throw Error(`teamA should be a singleton`);
+  console.log(moduleA);
+  moduleA.teamA();
 }

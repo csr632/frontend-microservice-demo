@@ -1,11 +1,11 @@
 {
-  "name": "@micro-frontend-demo/team-a",
+  "name": "@micro-frontend-demo/team-e",
   "version": "2.0.6",
   "main": "dist/index.js",
   "license": "MIT",
   "scripts": {
     "build": "rm -rf dist loader && rollup -c rollup.config.js",
-    "serve": "npm run build && http-server -p 8002 --cors",
+    "serve": "npm run build && http-server -p 8006 --cors",
     "prepare": "npm run build"
   },
   "devDependencies": {
@@ -14,7 +14,10 @@
     "http-server": "^0.12.1",
     "rollup": "^2.2.0",
     "tslib": "^1.11.1",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "@types/lodash": "^3.0.0"
   },
-  "dependencies": {}
+  "peerDependencies": {
+    "lodash": "^3.0.0"
+  }
 }

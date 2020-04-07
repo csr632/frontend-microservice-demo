@@ -1,6 +1,5 @@
 import resolve from "@rollup/plugin-node-resolve";
 import typescript from "@rollup/plugin-typescript";
-import { externalNonRelative } from "mfe-buildtime";
 
 export default [
   {
@@ -21,9 +20,6 @@ export default [
       format: "esm",
       sourcemap: true
     },
-    plugins: [
-      externalNonRelative(),
-      typescript({ tsconfig: "./_loader/tsconfig.json" })
-    ]
+    plugins: [resolve(), typescript({ tsconfig: "./_loader/tsconfig.json" })]
   }
 ];

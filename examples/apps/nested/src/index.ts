@@ -1,6 +1,10 @@
-import loader from "@micro-frontend-demo/team-d/_loader";
+import loader from "@micro-frontend-demo/team-d/loader";
 
-loader().then(module => {
+const moduleD = loader();
+
+moduleD.then(module => {
   console.log(module);
+  module.teamD();
+  module.teamD();
   module.teamD();
 });
